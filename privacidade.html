@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade — OmniFitAI</title>
+  <style>
+    :root { --bg: #0B0F13; --card: #121417; --border: #262A30; --text: #F3F4F6; --muted: #9CA3AF; --accent: #10B981; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 32px 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 36px; }
+    h1 { font-size: 1.9rem; margin-bottom: 6px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 28px; }
+    h2 { font-size: 1.25rem; color: var(--accent); margin: 28px 0 10px; }
+    p, li { color: #D1D5DB; font-size: 0.98rem; margin-bottom: 12px; }
+    ul { padding-left: 22px; }
+    .highlight { background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--accent); padding: 14px 16px; border-radius: 8px; margin: 16px 0; }
+    a { color: var(--accent); }
+    .back { display: inline-block; margin-bottom: 20px; text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="back">← Voltar para OmniFitAI</a>
+    <h1>Política de Privacidade</h1>
+    <p class="updated">Última atualização: 12 de novembro de 2026</p>
+
+    <p>A sua privacidade é um pilar fundamental da arquitetura do <strong>OmniFitAI</strong>. Esta Política de Privacidade explica de forma transparente quais dados coletamos, como os processamos e quais são os seus direitos conforme a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+
+    <h2>1. Dados Coletados e Finalidade</h2>
+    <ul>
+      <li><strong>Dados de Conta e Autenticação:</strong> Nome, endereço de e-mail e identificador único (via Google OAuth ou cadastro direto) para autenticação e sincronização segura de progresso.</li>
+      <li><strong>Perfil Biométrico e de Condicionamento:</strong> Idade, sexo biológico, peso, altura, nível de atividade física, objetivos e eventuais restrições articulares informadas voluntariamente por você para cálculo de Taxa Metabólica Basal (equação de Mifflin-St Jeor) e geração personalizada de treinos.</li>
+      <li><strong>Histórico de Treinos e Nutrição:</strong> Exercícios concluídos, séries, repetições, sequências (<em>streaks</em>), conquistas e registros alimentares (incluindo consultas de códigos de barras EAN-13 e tabelas nutricionais).</li>
+    </ul>
+
+    <h2>2. Uso da Câmera e Processamento Local (ML Kit / Visão Computacional)</h2>
+    <div class="highlight">
+      <strong>Compromisso de Processamento On-Device:</strong> Durante os treinos guiados por visão computacional, o processamento da câmera ocorre <strong>100% localmente no processador do seu dispositivo</strong> por meio do Google ML Kit. Nenhum vídeo, foto ou fluxo de imagem dos seus exercícios é gravado, armazenado na memória permanente ou transmitido para nossos servidores ou terceiros. Os quadros (<em>frames</em>) são descartados em tempo real logo após a leitura matemática das coordenadas articulares.
+    </div>
+    <p>Quando você utiliza voluntariamente o recurso de leitura de rótulos nutricionais ou registro fotográfico de refeições, a imagem capturada é comprimida localmente e enviada de forma criptografada (HTTPS/TLS) para nossa API exclusivamente para extração dos dados nutricionais (OCR/estimativa calórica), sendo descartada em memória imediatamente após o processamento, sem armazenamento permanente ou uso para identificação facial.</p>
+
+    <h2>3. Armazenamento e Segurança</h2>
+    <p>O OmniFitAI adota arquitetura <em>offline-first</em>: catálogos de exercícios, rotinas e bancos de alimentos funcionam localmente no seu dispositivo. Quando sincronizados com a nuvem para backup, os dados trafegam via TLS e são armazenados em servidores protegidos (Google Cloud Platform e banco de dados PostgreSQL Neon) com controle estrito de acesso.</p>
+
+    <h2>4. Compartilhamento com Terceiros</h2>
+    <p>Não vendemos, alugamos ou comercializamos dados pessoais. Compartilhamos informações apenas com provedores essenciais de infraestrutura e pagamento sob rigorosos padrões de segurança:</p>
+    <ul>
+      <li><strong>Google Cloud Platform &amp; Neon Database:</strong> Hospedagem de infraestrutura e banco de dados criptografado.</li>
+      <li><strong>Google Play Billing:</strong> Processamento exclusivo de assinaturas e pagamentos (não temos acesso a números de cartão de crédito ou dados bancários).</li>
+    </ul>
+
+    <h2>5. Seus Direitos e Exclusão de Dados (LGPD)</h2>
+    <p>Você pode acessar, editar ou excluir seus dados a qualquer momento diretamente nas configurações do aplicativo ou seguindo as instruções na página <a href="/excluir-conta">Exclusão de Conta e Dados</a>.</p>
+
+    <h2>6. Contato do Encarregado (DPO)</h2>
+    <p>Para dúvidas ou solicitações relacionadas à privacidade, entre em contato pelo e-mail: <a href="mailto:privacidade@omnifitai.com.br">privacidade@omnifitai.com.br</a>.</p>
+  </div>
+</body>
+</html>
